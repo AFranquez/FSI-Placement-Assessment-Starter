@@ -1,23 +1,52 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
+let addGB = document.getElementById('add-gb');
+let minusGB = document.getElementById('minus-gb');
 
-// First, tell us your name
-let yourName = "Jane Doe" // HINT: Replace this with your own name!
+let quantityGB= 0
 
-// We'll use these variables to track the counts of each cookie type
-let gb = 0      // Gingerbread
-let cc = 0      // Chocolate Chip
-let sugar = 0   // Sugar Sprinkle
-
-// Code to update name display 
-document.getElementById('credit').textContent = `Created by ${yourName}`
-
-// Event listener for clicks on the "+" button for Gingerbread cookies
-document.getElementById('add-gb').addEventListener('click', function() {
-    // HINT: You can delete this console.log after you no longer need it!
-    console.log('Gingerbread + button was clicked!')
-
-    // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+addGB.addEventListener('click', function () {
+    quantityGB +=1;
+    document.getElementById('qty-gb').textContent = quantityGB;
 })
 
-// TODO: Hook up event listeners for the rest of the buttons
+minusGB.addEventListener('click', function () {
+    if (quantityGB >0) {
+        quantityGB -=1;
+    }
+    document.getElementById('qty-gb').textContent = quantityGB;
+})
+
+let addCC = document.getElementById('add-cc');
+let minusCC = document.getElementById('minus-cc');
+
+let quantityCC= 0
+
+addCC.addEventListener('click', function () {
+    quantityCC +=1;
+    document.getElementById('qty-cc').textContent = quantityCC;
+})
+
+minusCC.addEventListener('click', function () {
+    if (quantityCC >0) {
+        quantityCC -=1;
+    }
+    document.getElementById('qty-cc').textContent = quantityCC;
+})
+
+let addSugar = document.getElementById('add-sugar');
+let minusSugar= document.getElementById('minus-sugar');
+
+let quantitySugar= 0
+
+addSugar.addEventListener('click', function () {
+    quantitySugar +=1;
+    document.getElementById('qty-sugar').textContent = quantitySugar;
+})
+
+minusSugar.addEventListener('click', function () {
+    if (quantitySugar >0) {
+        quantitySugar -=1;
+    }
+    document.getElementById('qty-sugar').textContent = quantitySugar;
+})
+
+
